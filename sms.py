@@ -1,6 +1,7 @@
 import sys
 import boto3
 sns = boto3.client('sns')
-number = sys.argv[1]   #'+56992229813'
-#sns.publish(PhoneNumber = number, Message='Error en procedimiento' )
-print number
+numero = sys.argv[1]   #'+56992229813'
+mensaje = sys.argv[2]
+sns.publish(PhoneNumber = numero, Message=mensaje)
+#print number
